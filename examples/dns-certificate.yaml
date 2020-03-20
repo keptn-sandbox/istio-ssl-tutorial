@@ -1,0 +1,15 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name: <CERTIFICATE_NAME>
+  namespace: istio-system
+spec:
+  secretName: <SECRET_WHICH_STORES_CERT>
+  issuerRef:
+    kind: Issuer
+    name: letsencrypt-prod
+  commonName: example.com
+  dnsNames:
+    - "example.com"
+    - "live.example.com"
+    - "*.live.example.com"
