@@ -2,6 +2,7 @@ apiVersion: cert-manager.io/v1alpha2
 kind: Issuer
 metadata:
   name: letsencrypt-prod
+  namespace: istio-system
 spec:
     acme:
         email: <YOUR_EMAIL>
