@@ -12,7 +12,7 @@ Further I can't garantee that it works at the end. It was a lot of trial and err
   - [Initial thoughts](#initial-thoughts)
   - [Issuing certificates](#issuing-certificates)
     - [Using Istio <v1.5 (go this route if you installed Istio with keptn)](#using-istio-v15-go-this-route-if-you-installed-istio-with-keptn)
-    - [Using Istio <v1.5 without SDS <span style="color:red">**EXPERIMENTAL**</span>](#using-istio-v15-without-sds-experimental)
+    - [Using Istio <v1.5 without SDS **EXPERIMENTAL**](#using-istio-v15-without-sds-experimental)
     - [Using Istio v1.5](#using-istio-v15)
   - [Automatically create/delete Route53 entrys with external-dns](#automatically-createdelete-route53-entrys-with-external-dns)
 
@@ -48,7 +48,9 @@ Because keptn, atm, comes with Istio 1.3.1, I wrote kind of a walkthrough for ve
 
 If you are installing keptn with Istio, v1.3.1 will be installed. Therefore you need to enable using [SDS](https://istio.io/pt-br/docs/tasks/security/citadel-config/auth-sds/). This will spawn a lot more pods in the Istio Namespace because it needs additional components. **That will eat a lot more ressources, so be warned.** 
 
-<span style="color:red">If you'd like to try to save some ressources, you can go to the next chapter and try the experimental way, without enabling SDS.</span>
+**If you'd like to try to save some ressources, you can go to the next chapter and try the experimental way, without enabling SDS.**
+
+<br>
 
 1. If not already installed, get istioctl: https://istio.io/docs/setup/getting-started/#download
    -  You'll probably need the fitting `istioctl` version to communicate
@@ -122,11 +124,13 @@ If you are installing keptn with Istio, v1.3.1 will be installed. Therefore you 
 
 <br>
 
-### Using Istio <v1.5 without SDS <span style="color:red">**EXPERIMENTAL**</span>
+### Using Istio <v1.5 without SDS **EXPERIMENTAL**
 
 I never tried this option but I was thinking about this. As mentioned above, activating SDS with keptn version lower than 1.5, it will spawn a lot of pods and Istio will eat up your ressources. So I had an idea but was not able to test it yet.
 
 Maybe it is possible to use it without acitvating SDS. Therefore you should follow the steps from Using Istio v1.5. If you reach the point of creating the certifcate ressources use this .yamls instead. 
+
+<br>
 
 4. Create the certificate
 
