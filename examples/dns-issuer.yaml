@@ -15,9 +15,10 @@ spec:
                 accessKeyID: <YOUR_ACCESS_KEY>
                 region: <<YOUR_REGION>
                 role: ""
+                # kubectl create secret generic cert-manager-route53 --from-file=secretKey=<SECRET>
                 secretAccessKeySecretRef:
                 key: secretKey
-                name: prod-route53-credentials-secret
+                name: cert-manager-route53
             selector:
             dnsZones:
             - <EXAMPLE.COM>
